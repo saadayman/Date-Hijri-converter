@@ -23,7 +23,7 @@ app.use(express.json()); // Middleware to parse JSON bodies
 app.get("/", (req, res, next) => {
   res.json("hi");
 });
-app.post("/convert-to-hijri", (req, res, next) => {
+app.get("/convert-to-hijri", (req, res, next) => {
   try {
     moment.locale("en");
     const date = req.body.date; // Expecting a date in 'YYYY-MM-DD' format
