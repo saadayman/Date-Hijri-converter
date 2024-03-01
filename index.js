@@ -18,6 +18,7 @@ const hijriMonthsAr = [
   "ذو القعدة",
   "ذو الحجة",
 ];
+console.log("test");
 app.use(express.json()); // Middleware to parse JSON bodies
 app.get("/", (req, res, next) => {
   res.json("hi");
