@@ -26,7 +26,7 @@ app.get("/", (req, res, next) => {
 app.get("/convert-to-hijri", (req, res, next) => {
   try {
     moment.locale("en");
-    const date = req.body.date; // Expecting a date in 'YYYY-MM-DD' format
+    const date = req.query.date; // Expecting a date in 'YYYY-MM-DD' format
     console.log(date);
 
     const hijriDate = moment(date).format("iYYYY/iM/iD");
