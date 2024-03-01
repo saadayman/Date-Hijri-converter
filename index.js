@@ -19,7 +19,9 @@ const hijriMonthsAr = [
   "ذو الحجة",
 ];
 app.use(express.json()); // Middleware to parse JSON bodies
-
+app.get("/", (req, res, next) => {
+  res.json("hi");
+});
 app.post("/convert-to-hijri", (req, res, next) => {
   try {
     moment.locale("en");
