@@ -18,7 +18,6 @@ const hijriMonthsAr = [
   "ذو القعدة",
   "ذو الحجة",
 ];
-console.log("test");
 app.use(express.json()); // Middleware to parse JSON bodies
 app.get("/", (req, res, next) => {
   res.json("hi");
@@ -57,8 +56,8 @@ app.get("/convert-to-hijri", (req, res, next) => {
           dayName: hijriDayNameEn,
         },
         arabic: {
-          hijriDate2,
-          formattedDate2,
+          hijriDate: hijriDate2,
+          formattedDate: formattedDate2,
           monthName: hijriMonthNameAr,
           dayName: hijriDayNameAr,
         },
